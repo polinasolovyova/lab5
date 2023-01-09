@@ -1,0 +1,325 @@
+
+body
+{
+    font-family: Jost;
+    font-weight: 400;
+
+    max-width: 1280px;
+
+    background-color: #DFDFDF;
+
+    margin: 0 auto; 
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 50px 80px;
+}
+
+#logo
+{
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 40px;
+
+    cursor: default;
+}
+
+#hamburger
+{
+    width: 50px;
+    height: 50px;
+
+    cursor: pointer;
+}
+
+.menu 
+{
+    position: relative;
+    display: inline-block;
+}
+
+.menu-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #fcfcfc;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.menu-content a 
+{
+    font-size: 30px;
+    color: #282828;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-content a:hover 
+{
+    background-color: #f1f1f1;
+}
+
+.menu:hover .menu-content 
+{
+    display: block;
+}
+
+.island 
+{
+    max-width: 1050px;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin: 25px auto;
+}
+
+#profile
+{
+    height: 725px;
+
+    display: flex;
+    flex-direction: column;
+
+    max-height: fit-content;
+}
+
+#bg
+{
+    width: 1050px;
+    height: 225px;
+    background-color: #7172AD;
+}
+
+#pfp
+{
+    width: 249px;
+    height: 249px;
+    border-radius: 50%;
+    border: solid #fff 10px;
+    background-color: #ABAAAA;
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user_name
+{
+    font-size: 60px;
+    color: #3c3e43;
+    margin-top: 400px;
+}
+
+.id
+{
+    font-size: 30px;
+    color: #9D9D9D;
+}
+
+#line
+{
+    width: 0px;
+    height: 400px;
+    background-color: #ABAAAA;
+    border: solid #ABAAAA 1px;
+    margin: 100px auto 30px 440px;
+}
+
+.name_description
+{
+    width: 440px;
+    font-size: 20px;
+    color: #7c7e82;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.description
+{
+    font-size: 30px;
+    color: #3c3e43;
+}
+
+#add_post
+{
+    height: 200px;
+
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+input
+{
+    font-family: Jost;
+    font-weight: 400;
+    font-size: 45px;
+
+    width: 600px;
+    height: 100px;
+
+    border-radius: 75px;
+
+    color: #e3e3e3;
+    background-color: #7172AD;
+    border: none;
+
+    text-align: center;
+
+    transition: 0.15s ease;
+}
+
+input:focus 
+{
+    outline: none;
+}
+
+#back
+{
+    font-size: 40px;
+    text-decoration: none;
+    
+    color: #282828;
+
+    padding: 12px 16px;
+
+    transition: all 0.5s;
+}
+
+  
+#back:hover 
+{
+    padding-left: 25px;
+}
+
+#account
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 90px;
+
+    font-size: 35px;
+
+    color: #282828;
+    background-color: #DFDFDF;
+
+    padding: 5px 50px;
+}
+
+#account a
+{
+    font-size: 30px;
+}
+
+.info
+{
+    font-size: 30px;
+}
+
+.account_name
+{
+    font-size: 35px;
+
+    margin-right: 10px;
+
+    color: #121212;
+}
+
+.account_id
+{
+    font-size: 35px;
+
+    color: #121212;
+}
+
+
+#button
+{
+    text-decoration: none;
+
+    color: #282828;
+
+    margin: auto 15px;
+}
+
+#button:hover
+{
+    text-decoration: underline;
+}
+
+#button_del
+{
+    text-decoration: none;
+
+    color: #811e1e;
+
+    margin: auto 15px;
+}
+
+#button_del:hover
+{
+    text-decoration: underline;
+}
+
+#create
+{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    margin: 0 auto;
+}
+
+#create_island
+{
+    display: flex;
+    justify-content: center;
+
+    font-size: 35px;
+
+    color: #282828;
+    background-color: #DFDFDF;
+
+    padding: 50px 50px;
+}
+
+#create_island #create_button 
+{
+    font-size: 30px;
+
+    width: 400px;
+    height: 50px;
+
+    color: #282828;
+    background-color: #DFDFDF;
+    
+    border: none;
+}
+
+#create_island #create_button:hover
+{
+   text-decoration: underline;
+}
+
+#create_island input
+{
+    font-size: 35px;
+
+    width: 400px;
+    height: 75px;
+
+    margin: 10px auto;
+}
