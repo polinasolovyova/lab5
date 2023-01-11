@@ -1,20 +1,11 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    $xml = simplexml_load_file("src/data/users.xml") or die("Error: Cannot create object");
-    $id = $_GET['id'];
-    $i = 0;
-    foreach ($xml->user as $user) {
+    require("db.php");
 
-   
-        if ($user['id'] == $id) {
-            unset($xml->user[$i]);
-            
-            break;
-        }
-
-        $i++;
+    if(isset($_GET['id']))
+    {
+        $id = $_GET['id'];
+        $db->query("DELETE FROM users WHERE id=$id");
     }
-    
-    $xml->saveXML('src/data/users.xml');
+
     header('location:index.php');
-}
+?>

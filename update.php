@@ -1,17 +1,24 @@
 <?php
 
-    require('db.php');
-    
-    if(isset($_POST['submit']))
+    require("db.php");
+
+    if ($_SERVER['REQUEST_METHOD'] === 'GET')
     {
+        $id = $_GET['id'];
+        $users = $db->query("SELECT * FROM users WHERE id=$id")->fetchAll(PDO::FETCH_ASSOC);
+        $users = $users[0];
+    }
+
+    else if ($_SERVER['REQUEST_METHOD'] === 'POST')
+    {
+        $id = $_POST['id'];
         $username = $_POST['username'];
         $usertag = $_POST['usertag'];
 
-        $db->query("INSERT INTO users(name, tag) VALUES ('$username', '$usertag')");
+        $db->query("UPDATE users SET name = '$username', tag = '$usertag' WHERE id=$id");
 
         header('location:index.php');
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -43,11 +50,12 @@
 
     <div class = "island" id = "create_island">
 
-        <form action="create.php" method="POST">
+        <form action="update.php" method="POST">
 
-            <div> <input type = "text" name = "username" required placeholder = "your username"/> </div>
-            <div> <input type = "text" name = "usertag" required placeholder = "your id"/> </div>
-            <div> <input id = "create_button" type = "submit" name="submit" value = "create" /> </div>
+            <div> <input type = "text" name = "username" required value="<?php echo $users['name'] ?>"/> </div>
+            <div> <input type = "text" name = "usertag" required value="<?php echo $users['tag'] ?>"/> </div>
+            <div> <input type="hidden" name="id" value="<?php echo $users['id'] ?>" /> </div>
+            <div> <input id = "create_button" type = "submit" name="submit" value = "change" /> </div>
             
         </form>
 
