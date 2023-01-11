@@ -1,6 +1,9 @@
-<?php
+<?php 
 
-    $xml = simplexml_load_file("src/data/users.xml") or die("Error: Cannot create object");
+    require("db.php");
+
+    $users = $db->query("SELECT * FROM users")->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -23,30 +26,31 @@
 </head>
 
 <body>
-
     <header>
 
-        <a id = "back" href = "list.php"> <span>back</span> </a>
+         <h1 id = "logo">LOGO</h1>
 
     </header>
 
     <div>
+    
         <?php
 
-        foreach ($xml->user as $user) 
+        foreach ($users as $user) 
         {
         ?>
             
             <div class = "island" id = "account">
 
                 <div class= "info">
-                    <span>user: </span> <span class="account_name"> <?= $user->name ?></span>
-                    <span>id: </span> <span class="account_id"> <?= $user->tag ?></span>
+                    <span>user: </span> <span class="account_name"> <?php echo $user['name']?></span>
+                    <span>id: </span> <span class="account_id"> <?php echo $user['tag']?></span>
                 </div>
 
                 <div class = "buttons">
-                    <a id = "button" href="list.php?id=<?= $user['id']?>">switch</a>
-                    <a id = "button_del" href="delete.php?id=<?= $user['id']?>">delete</a>
+                    <a id = "button" href="user.php?id=<?= $user['id']?>">switch</a>
+                    <a id = "button" href="update.php?id=<?= $user['id']?>">change</a>
+                    <a id = "button" href="delete.php?id=<?= $user['id']?>">delete</a>
                 </div>
 
             </div>
