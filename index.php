@@ -2,7 +2,7 @@
 
     require("db.php");
 
-    $users = $db->query("SELECT * FROM users")->fetchAll(PDO::FETCH_ASSOC);
+    $users = $db->query("SELECT * FROM my_db.users")->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -21,14 +21,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Jost&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
-    <title>My accounts</title>
+    <title>TOLKO</title>
 
 </head>
 
 <body>
     <header>
 
-         <h1 id = "logo">LOGO</h1>
+         <h1 id = "logo">TOLKO</h1>
 
     </header>
 

@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Jost&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
-    <title>LOGO</title>
+    <title>TOLKO</title>
 
 </head>
 
@@ -32,7 +32,7 @@
 
     <header>
 
-        <h1 id = "logo">LOGO</h1>
+        <h1 id = "logo">TOLKO</h1>
 
         <div class = "menu">
 
@@ -51,17 +51,23 @@
 
         <div id = "bg"></div>
 
-        <div id = "pfp"></div>
-
-        <div class = "user_name"> <?php echo $users['name']?> </div>
-
-        <div class = "id" > <?php echo $users['tag']?> </div>
-
-        <div id = "line"></div>
-
-        <div class = "description">
-            lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        <div id = "pfp">
+            <div class = "user_name"> 
+                <?php echo $users['name']?>
+                <div class = "id" > <?php echo $users['tag']?> </div>
+            </div>
         </div>
+
+        <div id = "line">
+            <div class = "name_description">
+                description
+                <div class = "description">
+                    lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </div>
+            </div>
+            
+        </div>
+    </div>
 
 
 </body>
